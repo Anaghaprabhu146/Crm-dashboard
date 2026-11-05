@@ -429,3 +429,42 @@ td {
   color: white;
   cursor: pointer;
 }
+
+/*  dashboard cards on mobile */
+
+@media (max-width: 768px) {
+  .stats-grid,
+  .dashboard-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .stat-card {
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+  }
+
+  .stat-top h3 {
+    font-size: 12px;
+    overflow-wrap: break-word;
+  }
+
+  .stat-top h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid,
+  .dashboard-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
